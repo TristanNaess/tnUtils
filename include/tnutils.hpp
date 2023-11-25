@@ -2,7 +2,7 @@
 #define __TNUTILS_HPP__
 
 #include <string>
-#include <string_view> // C++ 17
+#include <string_view> // C++17
 
 namespace tnUtils
 {
@@ -11,6 +11,8 @@ namespace tnUtils
     // -----------------------------
     
     const std::string white_space = " \t\n\r\v\f"; // basic ASCII whitespace characters. I may expand to UTF-8 if necessary
+
+    constexpr bool contains(const std::string_view line, char c); // arguably this should be templated to CharT
 
     // remove leading and trailing whitespace
     // creates new chomped string
